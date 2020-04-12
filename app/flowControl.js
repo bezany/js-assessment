@@ -11,5 +11,21 @@ exports.flowControlAnswers = {
     // otherwise the function should return the number, or false if no number
     // was provided or the value provided is not a number
 
+    if (typeof num !== 'number') {
+      return false;
+    }
+
+    const isDivTo3 = num % 3 === 0;
+    const isDivTo5 = num % 5 === 0;
+
+    if (isDivTo3 && isDivTo5) {
+      return 'fizzbuzz';
+    } else if (isDivTo3) {
+      return 'fizz';
+    } else if (isDivTo5) {
+      return 'buzz';
+    }
+
+    return num;
   }
 };
